@@ -3,14 +3,14 @@ kind: Service
 metadata:
   labels:
     k8s-app: kubernetes-dashboard
-  name: kubernetes-dashboard-service
+  name: kubernetes-dashboard
   namespace: kube-system
 spec:
   ports:
     - port: 8443
       protocol: TCP
       targetPort: 8443
-      nodePort: 31234
+      nodePort: 31235
   selector:
     k8s-app: kubernetes-dashboard
   sessionAffinity: None
